@@ -1,0 +1,23 @@
+.converter{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    margin-top: auto;
+    >form{
+        height: 80vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        >Input{
+            width: 15%;
+            cursor: pointer;
+
+        }
+    }
+}

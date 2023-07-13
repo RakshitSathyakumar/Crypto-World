@@ -12,7 +12,7 @@ const Exchanges = () => {
     const fetchCoins = async () => {
       try {
         const { data } = await axios.get(`${server}/exchanges`);
-        console.log(data);
+        console.log(data[0].current_price);
         setExchanges(data);
         setLoading(false);
       } catch (error) {

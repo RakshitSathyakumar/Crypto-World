@@ -29,12 +29,12 @@ const Converter = () => {
     <div className="converter">
       <form onSubmit={submit}>
         <Heading size={"md"}>Enter your Amount in INR</Heading>
-        <Input type="text" name="" id="" value={inp} onChange={(e)=>setInp(e.target.value)}/>
+        <Input textAlign={'center'} type="text" name="" id="" value={inp} onChange={(e)=>setInp(e.target.value)}/>
         {/* <Button type="submit" onSubmit={()=>console.log({inp})}>Convert into BCoins</Button> */}
         <Heading size={'sm'}>Current Price of BTC is : INR {data}</Heading>
         <Heading size={'sm'}>The number of units of BTC you can Buy Right Now is : {inp/data}</Heading>
       </form>
-        {/* <p>{inp}</p> */}
+        
     </div>
   );
 };

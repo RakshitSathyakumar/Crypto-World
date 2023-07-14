@@ -7,6 +7,7 @@ import Exchanges from "./components/Exchanges";
 import CoinsDetail from "./components/CoinsDetail";
 import Converter from "./components/Converter";
 import Error from "./components/Error";
+import Footer from "./components/footer";
 
 import './styles/wallet.scss'
 import  './styles/DynamicBar.scss'
@@ -22,6 +23,7 @@ function App() {
         <Route path="/converter" element={<Converter />} />
         <Route path="*" element={<Error />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

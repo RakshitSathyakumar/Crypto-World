@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 const Header = () => {
   return (
-    <HStack p={"4"} justifyContent={"space-between"} bgColor={"blue.900"}>
+    <HStack p={"4"} justifyContent={"space-between"} bgColor={"#071952"}>
       <Link to={"/"}>
         <Heading size={"md"} color={"white"}>
           Cryto World

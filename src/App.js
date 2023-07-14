@@ -6,9 +6,10 @@ import Coins from "./components/Coins";
 import Exchanges from "./components/Exchanges";
 import CoinsDetail from "./components/CoinsDetail";
 import Converter from "./components/Converter";
-
+import Error from "./components/Error";
 
 import './styles/wallet.scss'
+import  './styles/DynamicBar.scss'
 function App() {
   return (
     <Router>
@@ -17,9 +18,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/coins" element={<Coins />} />
         <Route path="/exchanges" element={<Exchanges />} />
-        <Route path="/coins:id" element={<CoinsDetail />} />
+        <Route path="/coins/:id" element={<CoinsDetail />} />
         <Route path="/converter" element={<Converter />} />
-        
+        <Route path="*" element={<Error />} />
       </Routes>
     </Router>
   );

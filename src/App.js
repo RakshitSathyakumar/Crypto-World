@@ -8,6 +8,8 @@ import CoinsDetail from "./components/CoinsDetail";
 import Converter from "./components/Converter";
 import Error from "./components/Error";
 import Footer from "./components/footer";
+import Pro from "./components/Pro.jsx";
+import Analysis from "./components/Analysis";
 
 import './styles/wallet.scss'
 import  './styles/DynamicBar.scss'
@@ -21,6 +23,9 @@ function App() {
         <Route path="/exchanges" element={<Exchanges />} />
         <Route path="/coins/:id" element={<CoinsDetail />} />
         <Route path="/converter" element={<Converter />} />
+        <Route path="/pro" element={<Pro />} />
+        <Route path="/analysis" element={<Analysis />} />
+
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />

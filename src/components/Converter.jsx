@@ -36,7 +36,7 @@ const Converter = () => {
           <Button
             type="sub"
             onClick={(e) => {
-              setInp(Math.max(0, inp - 200));
+              setInp(Math.max(0, inp - 300));
             }}
           >
             -
@@ -52,7 +52,7 @@ const Converter = () => {
           <Button
             type="add"
             onClick={(e) => {
-              setInp(inp + 500);
+              setInp(Number(inp) + 500);
             }}
           >
             +

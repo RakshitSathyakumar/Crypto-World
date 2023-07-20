@@ -13,6 +13,8 @@ import Analysis from "./components/Analysis";
 
 import './styles/wallet.scss'
 import  './styles/DynamicBar.scss'
+import './styles/Analysis.scss'
+
 function App() {
   return (
     <Router>

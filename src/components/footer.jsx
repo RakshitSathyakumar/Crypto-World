@@ -12,6 +12,7 @@ const Footer = () => {
       minH={"20"}
       px={"16"}
       py={["16", "8"]}
+
     >
         <VStack>
 

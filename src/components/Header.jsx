@@ -11,7 +11,7 @@ const Header = () => {
           </Heading>
         </Link>
         <Link to={'/pro'} alignItems={'flex-start'}>
-        <Text >Be a pro!</Text>
+        <Text color={'whiteAlpha.900'}>Be a PRO</Text>
         </Link>
       </VStack>
       <HStack m={"2"} alignItems={"stretch"}>

@@ -1,70 +1,104 @@
-import React, { useEffect, useState } from "react";
+import React from 'react';
 import {
   Box,
-  Container,
-  HStack,
   Heading,
-  Image,
   Text,
+  Button,
+  Flex,
+  Image,
+  Link,
+  HStack,
   VStack,
-} from "@chakra-ui/react";
-import img from "../assets/tradeHub.jpg";
-import btc2 from "../assets/fotor-ai-2023071523651_2.jpg";
-import btc1 from "../assets/fotor-ai-2023071523651_1.jpg";
-import { motion } from "framer-motion";
-import { server } from "../index";
-import axios from "axios";
+} from '@chakra-ui/react';
 
-const Home = () => {
-  const [trending, setTrending] = useState({});
-  const [loading, setLoading] = useState(true);
+import src from '../assets/fotor-ai-2023071523651_2.jpg'
+import src1 from '../assets/fotor-ai-2023071523651_1.jpg'
+import Exchanges from './Exchanges';
 
-  useEffect(() => {
-    const fetch = async () => {
-      try {
-        const { data } = await axios.get(`${server}/search/trending`);
-        setTrending(data);
-        setLoading(false);
-      } catch (err) {
-        console.log(err);
-        setLoading(false);
-      }
-    };
-    fetch();
-  },[]);
-  console.log(trending);
 
+const HomeLandingPage = () => {
   return (
-    <Box bgColor={"#3282B8"} w={"full"} h={"80vh"} opacity={"0.9"}>
-      {/* <motion.div
-        style={{
-          height: "80vh",
-          padding: "50px",
-        }}
-        // animate={{
-        //   translateY: "20px",
-        // }}
-        // transition={{
-        //   duration: 2,
-        //   repeat: Infinity,
-        //   repeatType: "reverse",
-        // }}
-      >
-        <HStack>
-          <Image w={"33%"} h={"50vh"} objectFit={"contain"} src={btc1} color={'#fff'} borderRadius={'20%'}/>
-          <VStack justifyContent={"center"} margin={"auto"} color={"#000"}>
-            <Heading color={'#000'}>Crytpo World</Heading>
-            <Text>One stop platform for all your crypto Tradings!</Text>
-          </VStack>
-          <Image w={"33%"} h={"50vh"} objectFit={"contain"} src={btc2} borderRadius={'20%'}/>
-        </HStack>
-        <Text p={'20'}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda alias voluptatum quam libero dolor consectetur veniam. Libero officiis consequatur corporis excepturi! Error tempora, in ex iure odio nostrum maxime aliquid.</Text>
-        
+    <Box p={6}>
+      {/* <Flex align="center"> */}
+        <HStack justifyContent={'space-between'}>
+        <Image
+          src={src1}
+          alt="Bitcoin Image"
+          maxW="400px"
+          borderRadius="md"
+        />
+        <VStack>
 
-      </motion.div>
-     */}
+          <Heading as="h1" mb={4}>
+            Welcome to Crypto World
+          </Heading>
+          <Text fontSize="lg">
+            Your one-stop platform for Trading and Investment in all Cryto Transactions
+          </Text>
+          <Button
+            colorScheme="blue"
+            size="lg"
+            mt={4}
+            onClick={() => {
+              
+            }}
+            variant={'ghost'}
+          >
+            Get Started
+          </Button>
+        </VStack>
+        <Image
+          src={src}
+          alt="Bitcoin Image"
+          maxW="400px"
+      
+          borderRadius="md"
+        />
+        </HStack>
+      {/* </Flex> */}
+
+      <Box mt={10} p={'10'}>
+        <Heading as="h2" mb={4}>
+          Why Crypto World?
+        </Heading>
+        <Text fontSize="lg">
+          At a team, we provide you with the best tools and resources to
+          make informed decisions about trading bitcoins. Whether you are a
+          beginner or an experienced trader, we've got you covered.
+        </Text>
+      </Box>
+
+      <Box mt={10} p={'16'}>
+        <Heading as="h2" mb={4}>
+          Features
+        </Heading>
+        <ul>
+          <li>
+            <Text fontSize="lg">
+              Real-time market data to keep you up-to-date with bitcoin prices.
+            </Text>
+          </li>
+          <li>
+            <Text fontSize="lg">
+              Educational resources to help you understand the world of
+              cryptocurrencies and trading strategies.
+            </Text>
+          </li>
+          <li>
+            <Text fontSize="lg">
+              User-friendly interface for a seamless trading experience.
+            </Text>
+          </li>
+        </ul>
+      </Box>
+
+      <Box mt={10} px={'16'}>
+        <Link href="/coins" color="blue.500" fontSize="lg">
+          Start Knowing the marker
+        </Link>
+      </Box>
     </Box>
   );
 };
 
-export default Home;
+export default HomeLandingPage;

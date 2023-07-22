@@ -6,22 +6,25 @@ import axios from "axios";
 const Converter = () => {
   const [data, setData] = useState(0);
   const [coinid,setCoinid]=useState("bitcoin");
+  const [id,setId] = useState("btc");
   useEffect(() => {
     const getValue = async () => {
       try {
         const { data } = await axios.get(
           `${server}/coins/markets?vs_currency=inr&ids=${coinid}&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en`
         );
+        console.log(data);
         console.log(data[0].current_price);
         setData(data[0].current_price);
+        setId(data[0].symbol);
       } catch (err) {
         console.log(err);
       }
     };
     getValue();
     console.log(data);
-  },[coinid]);
-
+  },[coinid,id]);
+  // console.log(coinid);
   const [inp, setInp] = useState(0);
   const submit = (e) => {
     e.preventDefault();
@@ -68,8 +71,8 @@ const Converter = () => {
     
       {/* <Button type="submit" onSubmit={()=>console.log({inp})}>Convert into BCoins</Button> */}
       {/* The next two lines assume you have a 'data' state to display the current price */}
-      <Heading size="sm">Current Price of {coinid} is : INR {data}</Heading>
-      <Heading size="sm">The number of units of BTC you can Buy Right Now is : {inp / data}</Heading>
+      <Heading size="sm">Current Price of {coinid.charAt(0).toUpperCase() + coinid.slice(1)} is : ₹{data}</Heading>
+      <Heading size="sm">The number of units of {id.toUpperCase()} you can Buy Right Now is : {inp / data}</Heading>
     </form>
     {/* <Text>*For the coins that firm belived to be best with future aspects</Text> */}
   </div>

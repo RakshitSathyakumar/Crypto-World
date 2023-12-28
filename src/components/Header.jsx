@@ -15,9 +15,9 @@ const Header = () => {
         </Link>
       </VStack>
       <HStack m={"2"} alignItems={"stretch"}>
-        <Button px={"4"} m={"auto"} variant={"unstyled"} color={"white"}>
+{/*         <Button px={"4"} m={"auto"} variant={"unstyled"} color={"white"}>
           <Link to={"/"}>Home</Link>
-        </Button>
+        </Button> */}
         <Button px={"4"} variant={"unstyled"} color={"white"}>
           <Link to={"/coins"}>Coins</Link>
         </Button>

@@ -35,7 +35,7 @@ const HomeLandingPage = () => {
           <Text fontSize="lg">
             Your one-stop platform for Trading and Investment in all Cryto Transactions
           </Text>
-          <Button
+{/*           <Button
             colorScheme="blue"
             size="lg"
             mt={4}
@@ -45,7 +45,7 @@ const HomeLandingPage = () => {
             variant={'ghost'}
           >
             Get Started
-          </Button>
+          </Button> */}
         </VStack>
         <Image
           src={src}
@@ -94,7 +94,7 @@ const HomeLandingPage = () => {
 
       <Box mt={10} px={'16'}>
         <Link href="/coins" color="blue.500" fontSize="lg">
-          Start Knowing the marker
+          Deep Dive into the MARKET
         </Link>
       </Box>
     </Box>

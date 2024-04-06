@@ -23,7 +23,7 @@ const Exchanges = () => {
     };
     fetchCoins();
   }, []);
-  if(eroor) return <Error message="JOJ"/>
+  if(eroor) return <Error message="Internal Server Error!"/>
   return (
     <Container maxW={"container.xl"}>
       {loading ? (
